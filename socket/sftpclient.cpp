@@ -1,4 +1,4 @@
-SSH.h
+// SSH.h
 #ifndef SSH_H_INCLUDED
 #define SSH_H_INCLUDED
 
@@ -30,7 +30,7 @@ class SSH {
 
 #endif // SSH_H_INCLUDED
 
-SFTP.h
+// SFTP.h
 #ifndef SFTP_H_INCLUDED
 #define SFTP_H_INCLUDED
 
@@ -73,7 +73,7 @@ class SFTP : public SSH {
         static const unsigned int FILTER_LONG;
 };
 #endif // SFTP_H_INCLUDED
-SFTP.cpp
+// SFTP.cpp
 #include "libssh2/include/libssh2.h"
 #include "libssh2/include/libssh2_sftp.h"
 #include "SFTP.h"
