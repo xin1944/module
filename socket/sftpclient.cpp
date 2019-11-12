@@ -12,8 +12,8 @@ class SSH {
         unsigned short port;
         int sock;
 
-        SSH(const SSH&);
-        SSH& operator=(const SSH&);
+        // SSH(const SSH&);
+        // SSH& operator=(const SSH&);
     protected:
         bool connected;
         void* session;
@@ -41,8 +41,8 @@ class SFTP : public SSH {
     private:
         void* sftpSession;
 
-        SFTP(const SFTP&);
-        SFTP& operator=(const SFTP&);
+        // SFTP(const SFTP&);
+        // SFTP& operator=(const SFTP&);
     public:
         SFTP(string, unsigned short = 22);
         virtual ~SFTP(void);
@@ -73,9 +73,10 @@ class SFTP : public SSH {
         static const unsigned int FILTER_LONG;
 };
 #endif // SFTP_H_INCLUDED
+
 // SFTP.cpp
-#include "libssh2/include/libssh2.h"
-#include "libssh2/include/libssh2_sftp.h"
+#include "libssh2/libssh2.h"
+#include "libssh2/libssh2_sftp.h"
 #include "SFTP.h"
 
 SFTP::SFTP(string ipAddress, unsigned short tcpPort) : SSH(ipAddress, tcpPort) {
