@@ -42,7 +42,7 @@ uint32 _state[4]; /* state (ABCD) */
 uint32 _count[2]; /* number of bits, modulo 2^64 (low-order word first) */
 byte _buffer[64]; /* input buffer */
 byte _digest[16]; /* message digest */
-bool _finished;   /* calculate finished ? */
+bool _finished;   /* calculate finished ? */
  
 static const byte PADDING[64]; /* padding for calculate */
 static const char HEX[16];
