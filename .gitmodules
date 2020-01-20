@@ -1,0 +1,3 @@
+[submodule "submd"]
+	path = submd
+	url = git@git.sduept.com:chenggx/git_submodule_test.git
