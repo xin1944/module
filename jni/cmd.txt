@@ -1,0 +1,5 @@
+javac Sample1.java
+javah -d jnilib -jni Sample1
+javap -s Sample1
+java -Djava.library.path=. Sample1
+gcc -shared -fPIC -I. -I/usr/local/java/include -I/usr/local/java/include/linux -o libSample1.so smp1.c
