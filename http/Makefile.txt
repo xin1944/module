@@ -1,0 +1,42 @@
+
+ARCH=
+
+CC		= $(ARCH)gcc
+
+CFLAGS += -I./ -g -lpthread
+
+
+TARGET=tiny_http_streamer
+
+SRC = ./tiny_http_live.c \
+	./main.c
+
+OBJS = $(patsubst %c, %o, $(SRC))
+
+default: $(TARGET)
+
+all: $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(TARGET): $(OBJS)
+	rm -f $(TARGET)
+	$(CC) $(CFLAGS) -o $@ $(OBJS)
+	@echo "*******  compiled: " $(TARGET) "  *******"
+
+clean:
+	rm -f *.o
+
+
+
+
+
+
+
+
+
+
+
+
+
